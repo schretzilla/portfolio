@@ -7,36 +7,33 @@
     <title>Home </title>
 
     <!-- Twitter Bootstrap3 Style Sheet -->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> -->
     <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- AngularJS Import -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
     <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
 
 </head>
 
 <body>
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="{% url 'portfolio:home' %}">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-          </ul>
+        <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="{% url 'portfolio:home' %}">S.B.S</a>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="{% url 'portfolio:home' %}">Home</a></li>
+            </ul>
         </nav>
-        <h3 class="text-muted">S.B.S</h3>
-      </div> <!-- End Nav List -->
 
-        <hr>
-
+    <div class="container">
 
         {% block content %}
 
         {% endblock %}
 
-
+<footer class="footer">
+    <div class="pull-right">
+        <p class="text-muted">Updated: 6/2016</p>
+    </div>
+</footer>
 
     </div> <!-- End Container -->
 
